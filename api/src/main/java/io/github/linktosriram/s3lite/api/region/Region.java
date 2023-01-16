@@ -66,11 +66,13 @@ public final class Region {
     public static final Region US_GOV_EAST_1 = Region.of("us-gov-east-1", create("https://s3.us-gov-east-1.amazonaws.com"));
     // AWS GovCloud (US-West)
     public static final Region US_GOV_WEST_1 = Region.of("us-gov-west-1", create("https://s3.us-gov-west-1.amazonaws.com"));
+    // Backblaze (US-West)
+    public static final Region BACKBLAZE = Region.of("backblaze", create("https://s3.us-west-002.backblazeb2.com"));
 
     private static final List<Region> REGIONS = unmodifiableList(asList(US_EAST_1, US_EAST_2, US_WEST_1, US_WEST_2, AP_EAST_1,
         AP_SOUTH_1, AP_NORTHEAST_1, AP_NORTHEAST_2, AP_NORTHEAST_3, AP_SOUTHEAST_1, AP_SOUTHEAST_2, AP_SOUTHEAST_3, AF_SOUTH_1,
         EU_WEST_1, EU_WEST_2, EU_WEST_3, EU_CENTRAL_1, EU_NORTH_1, EU_SOUTH_1, CA_CENTRAL_1, SA_EAST_1, ME_CENTRAL_1, ME_SOUTH_1,
-        CN_NORTH_1, CN_NORTHWEST_1, US_GOV_EAST_1, US_GOV_WEST_1));
+        CN_NORTH_1, CN_NORTHWEST_1, US_GOV_EAST_1, US_GOV_WEST_1, BACKBLAZE));
 
     public static Region of(final String regionName, final URI endpoint) {
         return new Region(regionName, endpoint);
